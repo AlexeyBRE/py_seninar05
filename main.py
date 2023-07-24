@@ -1,9 +1,10 @@
-#  Задайте список случайных чисел от 1 до 10, выведите все элементы больше 5. Используйте для решения лямбда-функцию.
+# Задача 3. Задайте список случайных чисел от 1 до 10. Посчитайте, сколько всего совпадающих элементов есть в списке.
+# Удалите все повторяющиеся элементы.
+# [1, 4, 2, 3, 4, 6, 1, 7] => 4 элемента совпадаютСписок уникальных элементов
 #
-# 2, 3, 4, 6, 7, 8 -> 6, 7, 8
-
+# [1, 4, 2, 3, 6, 7]
 import random
-numbers = [random.randint(0 , 10) for _ in range(10)]
+numbers = [random.randint(0,10) for _ in range(15)]
 print(numbers)
-new_numb = list(filter(lambda x: x > 5, numbers))
-print(f'{new_numb} найдено чисел больше 5 -> {len(numbers) - len(new_numb)}')
+new_numb = list(set(numbers))
+print(f'{new_numb} найдено совпадений -> {len(numbers) - len(new_numb)}')
